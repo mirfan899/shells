@@ -14,7 +14,6 @@ for i in *.wav; do
   ffmpeg -i ${i} -acodec pcm_s16le -ac 1 -ar 16000 ${temp_dir}/${i};
 done
 
-unzip
 # copy to merlin directory
 rm merling/egs/cantonese_voice/s1/database/wav/*.wav
 cp temp/*.wav merling/egs/cantonese_voice/s1/database/wav

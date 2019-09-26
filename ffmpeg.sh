@@ -14,7 +14,9 @@ for i in *.wav; do
   ffmpeg -i ${i} -acodec pcm_s16le -ac 1 -ar 16000 ${temp_dir}/${i};
 done
 
-# copy to merlin directory
-rm merling/egs/cantonese_voice/s1/database/wav/*.wav
-cp temp/*.wav merling/egs/cantonese_voice/s1/database/wav
-rm -rf temp
+# convert .wav to 22khz 16 bit wav
+mkdir temp
+temp_dir=./temp
+for i in *.wav; do
+  ffmpeg -i ${i} -acodec pcm_s16le -ac 1 -ar 22050 ${temp_dir}/${i};
+done

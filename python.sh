@@ -4,7 +4,7 @@ wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz
 tar xvf Python-3.6.8.tgz
 cd Python-3.6.8
 
-./configure --enable-optimizations --enable-shared --prefix=/usr/local
+./configure --enable-optimizations --enable-shared --prefix=/usr/local --with-pydebug
 make -j 2
 make altinstall
 

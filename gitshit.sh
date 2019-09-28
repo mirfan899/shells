@@ -7,3 +7,8 @@ git remote show origin
 git remote -v
 ## local branches
 git branch -v
+
+## Clone a specific branch
+git clone -b <branch> <remote_repo>
+## Example
+git clone -b mandarin https://github.com/begeekmyfriend/tacotron.git

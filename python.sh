@@ -11,6 +11,7 @@ make altinstall
 
 # https://unix.stackexchange.com/questions/190794/uninstall-python-installed-by-compiling-source
 # remove Python installed from source
+cd Python-3.6.8
 make clean
 prefix='/usr/local/'
 pyver='3.6'
